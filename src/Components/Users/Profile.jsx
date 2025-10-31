@@ -8,7 +8,9 @@ const Profile = () => {
   const { User, cartItems = [], Logout } = React.useContext(AppContext);
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
-  const url = "http://localhost:3000/api";
+  // const url = "http://localhost:3000/api";
+  const url = "https://api-techgadget-backend.onrender.com/api";
+
   const token = localStorage.getItem("token");
 
   // Fetch user orders from backend

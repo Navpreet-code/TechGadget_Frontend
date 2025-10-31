@@ -16,7 +16,9 @@ const EditProduct = () => {
 
   const { id } = useParams();
   const navigate = useNavigate();  
-  const url = "http://localhost:3000/api";
+  // const url = "http://localhost:3000/api";
+  const url = "https://api-techgadget-backend.onrender.com/";
+
 
   useEffect(() => {
     const fetchProduct = async () => {

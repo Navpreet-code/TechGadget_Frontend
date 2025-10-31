@@ -9,6 +9,9 @@ const AdminContacts = () => {
 
   const navigate = useNavigate();
 
+  const url = "https://api-techgadget-backend.onrender.com/api";
+
+
   // Example logout function
   const AdminLogout = () => {
     localStorage.removeItem("adminToken");
@@ -18,7 +21,7 @@ const AdminContacts = () => {
   const fetchContacts = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:3000/api/Contact/GetContacts");
+      const res = await axios.get(`${url}/Contact/GetContacts`);
       if (res.data.success) {
         setContacts(res.data.data);
       }

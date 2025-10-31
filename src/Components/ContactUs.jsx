@@ -29,7 +29,7 @@ const ContactUs = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:3000/api/Contact/AddContact", {
+      const res = await axios.post("https://api-techgadget-backend.onrender.com/api/Contact/AddContact", {
         name,
         email,
         message

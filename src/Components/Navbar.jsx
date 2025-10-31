@@ -10,7 +10,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import AppContext from "../Context/AppContext";
 
 // ✅ Base API
-const API = "http://localhost:3000/api/Product";
+const API = "https://api-techgadget-backend.onrender.com/api/Product";
 
 // ✅ User Dropdown
 const UserDropdown = ({ targetRef, isOpen, onClose }) => {

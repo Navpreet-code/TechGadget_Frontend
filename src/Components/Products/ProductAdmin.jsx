@@ -6,7 +6,9 @@ import axios from "axios";
 const ProductAdmin = () => {
   const { products, AdminLogout } = useContext(AppContext);
   const navigate = useNavigate();
-  const url = "http://localhost:3000/api";
+  // const url = "http://localhost:3000/api";
+  const url = "https://api-techgadget-backend.onrender.com/api";
+
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
 

@@ -28,8 +28,8 @@ const AdminDashboard = () => {
   });
   const [chartMode, setChartMode] = useState("daily");
   const navigate = useNavigate();
-
-  const apiBase = "http://localhost:3000/api/Admin/DashboardStats";
+  
+  const apiBase = "https://api-techgadget-backend.onrender.com/api/Admin/DashboardStats";
 
   const fetchStats = async () => {
     try {

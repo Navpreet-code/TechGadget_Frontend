@@ -5,7 +5,7 @@ import AppContext from "../Context/AppContext";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const API = "http://localhost:3000/api/Product";
+const API = "https://api-techgadget-backend.onrender.com/api/Product";
 
 const Home = () => {
   const { AddtoCart } = useContext(AppContext);

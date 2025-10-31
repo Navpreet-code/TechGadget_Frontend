@@ -13,7 +13,9 @@ const UserOrders = () => {
   const [selectedStatus, setSelectedStatus] = useState("All");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const url = "http://localhost:3000/api";
+  // const url = "http://localhost:3000/api";
+  const url = "https://api-techgadget-backend.onrender.com/api";
+
   const token = localStorage.getItem("token");
 
   const statusTabs = ["All", "Placed", "Shipped", "Delivered", "Cancelled", "Returned"];

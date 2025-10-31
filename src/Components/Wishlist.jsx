@@ -103,7 +103,7 @@ const Wishlist = () => {
           ))
         ) : (
           <p className="text-center text-gray-600 text-lg">
-            Your wishlist is empty 
+            Your Wishlist is Empty 
           </p>
         )}
       </div>

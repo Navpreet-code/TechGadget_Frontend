@@ -16,7 +16,7 @@ const Review = () => {
   // ✅ Fetch reviews - only top 3 (based on latest or best rating)
   const fetchReviews = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/Reviews/GetReviews");
+      const res = await axios.get("https://api-techgadget-backend.onrender.com/api/Reviews/GetReviews");
       if (res.data.success && res.data.reviews.length > 0) {
         // 🔹 Sort reviews: highest rating first, then latest
         const sorted = res.data.reviews
@@ -53,7 +53,7 @@ const Review = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:3000/api/Reviews/AddReview", formData);
+      const res = await axios.post("https://api-techgadget-backend.onrender.com/api/Reviews/AddReview", formData);
       if (res.data.success) {
         toast.success("✅ Review added successfully!");
         setFormData({ name: "", rating: "", message: "" });

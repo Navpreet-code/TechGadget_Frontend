@@ -5,7 +5,9 @@ import "react-toastify/dist/ReactToastify.css";
 import { toast,Zoom } from "react-toastify";
 
 const AppState = ({ children }) => {
-  const url = "http://localhost:3000/api";
+  // const url = "http://localhost:3000/api";
+  const url = "https://api-techgadget-backend.onrender.com/api";
+  
   const [products, setProducts] = useState([]);
   const [token, setToken] = useState("");
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -232,7 +234,7 @@ const login = async (email, password) => {
   const AddtoCart = async (ProductId, Title, Price, Quantity, Image) => {
   try {
     const api = await axios.post(
-      `http://localhost:3000/api/Cart/AddCarts`,
+      `${url}/Cart/AddCarts`,
       { ProductId, Title, Price, Quantity, Image, },
       {
         headers: {
@@ -445,7 +447,7 @@ const UserPassword = async ({ email, oldPassword, password }) => {
     }
 
     const response = await axios.put(
-      "http://localhost:3000/api/User/UserPassword",
+      `${url}/api/User/UserPassword`,
       { email, oldPassword, password }
     );
     return response.data;
