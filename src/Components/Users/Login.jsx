@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import AppContext from "../../Context/AppContext";
-import "../../styles/Login.css";
+import "../../Styles/Login.css";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import { useNavigate } from "react-router-dom";

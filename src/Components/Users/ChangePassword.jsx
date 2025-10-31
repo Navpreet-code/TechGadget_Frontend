@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import AppContext from "../../Context/AppContext";
-import "../../styles/ChangePassword.css";
+import "../../Styles/ChangePassword.css";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 

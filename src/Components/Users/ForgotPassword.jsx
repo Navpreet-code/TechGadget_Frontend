@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AppContext from "../../Context/AppContext";
-import "../../styles/Forget.css";
+import "../../Styles/Forget.css";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 

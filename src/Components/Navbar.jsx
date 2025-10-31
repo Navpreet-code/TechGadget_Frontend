@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "../styles/Navbar.css";
+import "../Styles/Navbar.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import AppContext from "../Context/AppContext";
 

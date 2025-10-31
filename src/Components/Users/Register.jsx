@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import "../../styles/Register.css";
+import "../../Styles/Register.css";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import AppContext from "../../Context/AppContext";
