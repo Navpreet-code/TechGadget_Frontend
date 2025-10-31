@@ -1,0 +1,187 @@
+body{
+  font-family: "Poppins",sans-serif;
+}
+
+/* Hero Section */
+.register-hero {
+  background:linear-gradient(140deg,#c1cfe4,#7794cc); 
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-content .title{
+  color: #232625;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+/* Subtitle Styling */
+.subtitle {
+  color: #232625;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.subtitle .home{
+  color: #232625;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.subtitle .home:hover{
+  color: #000000;
+  transform: translateY(-5px) scale(1.05); 
+  font-weight: 900;
+  font-size: 13px;
+  bottom: -3px;             
+
+}
+
+.subtitle .home:hover::after {
+  width: 100%;            
+}
+
+/* Register Section */
+.register {
+  /* background: linear-gradient(135deg, #bdc3c7, #eef2f3); */
+  background-color:#d7dde8;
+}
+
+/* Card Styling */
+.register-card {
+  margin: 50px; 
+  background: whitesmoke;
+  width: 90%;       
+  max-width: 480px;  
+  height: auto;     
+  padding: 30px 40px;
+  border-radius: 42px;
+  border: 2px solid #000;
+  box-shadow: 0 0px 5px 5px #232625;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Headings */
+.heading {
+  font-size: 25px;
+  font-weight: 500;
+  color: black;
+}
+.sub-heading {
+  font-size: 12px;
+  color: #556270;
+  margin: 4px 2px 19px 0;
+}
+
+/* Label styling */
+.labels {
+  color: black;
+  font-size: 15px;
+  padding: 3px 1px;
+}
+
+/* Input wrapper */
+.input-group {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+/* Input field */
+.input-field {
+  width: 100%;
+  padding: 10px 14px 10px 40px;
+  border: 1px solid #232625;
+  background-color: #d7dde8;
+  border-radius: 20px;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Icon inside input */
+.input-group .fa {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  color: black;
+  font-size: 14px;
+  pointer-events: none; /* so click goes to input */
+}
+
+.input-field:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 4px rgba(99, 102, 241, 0.4);
+}
+
+/* Signup Button */
+.signup-btn {
+  background: #1877F2;
+  color: white;
+  padding: 10px;
+  border-radius: 80px;
+  font-weight: 400;
+  border: none;
+}
+.signup-btn:hover {
+  background: #ff00cc;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+/* Footer */
+.footer-text {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.signup-link {
+  color: #0551f3;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.signup-link:hover {
+  color: #ff00cc;
+  font-weight: 900;
+}
+
+/* Terms & Conditions Box */
+.terms-box {
+  display: flex;
+  align-items: center;
+  margin: 12px 0 20px 0;
+  font-size: 13px;
+  color: #232625;
+}
+
+.terms-box input[type="checkbox"] {
+  accent-color: #1877F2; /* checkbox color */
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.terms-box label {
+  cursor: pointer;
+}
+
+.terms-link {
+  color: #0551f3;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.terms-link:hover {
+  color: #ff00cc;
+  text-decoration: underline;
+}

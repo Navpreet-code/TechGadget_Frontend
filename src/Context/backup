@@ -1,0 +1,116 @@
+import React, { useEffect, useState } from "react";
+import AppContext from "./AppContext";
+import axios from "axios";
+
+const AppState = ({ children }) => {
+  const url = "http://localhost:3000/api";
+  const [products, setProducts] = useState([]);
+  const [token, setToken] = useState([]);
+  const [isAuthenticated, setIsAuthenticated] = useState([]);
+  const [User, setUser] = useState([]);
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const api = await axios.get(`${url}/Product/GetProducts`, {
+          headers: {
+            "Content-Type": "application/json", 
+          },
+          withCredentials: true,
+        });
+
+        // console.log("Products Fetched:", api.data);
+        setProducts(api.data);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+
+    fetchProduct();
+  }, []);
+
+  useEffect(()=>{
+    let Istoken = localStorage.getItem("token");
+    // console.log("Token Is:", Istoken)
+
+    if(Istoken){
+      setToken(Istoken)
+      setIsAuthenticated(true);
+    }
+    UserProfile()
+  }, [])
+
+  const register = async (name,email,password) => {
+    const api = await axios.post (`${url}/User/Register`, {name,email,password},
+      {
+        headers : {
+          'Content-Type': 'application/json',
+        },
+        withCredentials : true,
+      });
+  }
+
+  const login = async (email,password) => {
+    const api = await axios.post (`${url}/User/Login`, {email,password},
+      {
+        headers : {
+          'Content-Type': 'application/json',
+        },
+        withCredentials : true,
+      });
+      console.log("User Login", api.data)
+      setToken(api.data.token);
+      setIsAuthenticated(true);
+      localStorage.setItem("token",api.data.token);
+      return api.data;
+  };
+
+  const UserProfile = async () =>{
+    const api = await axios.get('http://localhost:3000/api/User/Profile', {
+      headers: {
+        "Content-Type":"application/json",
+        Authentication:token
+      },
+      withCredentials:true,
+    })
+    // console.log("user profile",api.data)
+    setUser(api.data.User);
+  };
+
+      const AddProduct= async(Title,Category,Quantity,Price,Image,Description) =>{
+        const api=await axios.post(`${url}/Product/AddProducts`,{Title,Category,Quantity,Price,Image,Description},
+        {
+            headers:{
+                'Context-Type': 'Application/json',
+            },
+            withCredentials:true,
+        });
+
+        console.log("User Register",api);
+    }
+
+    const AddtoCart = async (ProductId,Title,Price,Quantity,Image) => {
+      console.log("Product Id = ", ProductId);
+      console.log("token", token)
+      const api = await axios.post(`${url}/Cart/AddCarts`, {ProductId, Title, Price, Quantity, Image},
+        {
+          headers: {
+            "Content-Type": "application/json",
+            "Authentication":token
+          },
+          withCredentials: true,
+        }
+      );
+      console.log("My Cart is: ",api)
+    }
+            
+
+  return (
+    <AppContext.Provider value={{ products, register,login,url,token,setIsAuthenticated,isAuthenticated,
+    User,AddProduct,AddtoCart}}>
+      {children}
+    </AppContext.Provider>
+  );
+};
+
+export default AppState;
