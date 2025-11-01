@@ -31,6 +31,7 @@ const UserDropdown = ({ targetRef, isOpen, onClose }) => {
 
   const menuItems = isAuthenticated
     ? [
+        { label: "Admin", path: "/AdminDashboard" },
         { label: "My Profile", path: "/Profile" },
         { label: "Change Password", path: "/ChangeUserPassword" },
         { label: "Logout", action: "logout" },

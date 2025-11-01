@@ -58,6 +58,7 @@ transition={Zoom}
 />
     <Routes>
       {/* User Panel */}
+    <Route path="/" element={<ProtectedRouteUser><Home/></ProtectedRouteUser>} />
     <Route path="/Navbar" element={<Navbar />} />
     <Route path="/Footer" element={<Footer />} /> 
     <Route path="/Profile" element={<ProtectedRouteUser><Profile/></ProtectedRouteUser>}/>
@@ -66,7 +67,6 @@ transition={Zoom}
     <Route path="/Register" element={<Register />} />
     <Route path="/Login" element={<Login />} />
     <Route path="/Wishlist" element={<ProtectedRouteUser><Wishlist/></ProtectedRouteUser>} />
-    <Route path="/" element={<ProtectedRouteUser><Home/></ProtectedRouteUser>} />
     <Route path="/PrivacyAndPolicy" element={<PrivacyAndPolicy />} />
     <Route path="/TermsAndCondition" element={<TermsAndConditions />} />
     <Route path="/AboutUs" element={<ProtectedRouteUser><AboutUs /></ProtectedRouteUser>} />

@@ -20,7 +20,7 @@ const Login = () => {
 
       if (response.success && response.token) {
         console.log("Login Successfully!!");
-        navigate("/Products"); // navigate only after profile/cart load
+        navigate("/"); 
       } else {
         console.log("Login failed:", response.message);
       }
