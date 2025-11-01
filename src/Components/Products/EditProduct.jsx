@@ -87,10 +87,10 @@ const EditProduct = () => {
 
           <nav className="flex flex-col gap-3 px-2 mt-8">
             {[
-              { to: "/Products", icon: "fa-gauge", label: "Dashboard" },
-              { to: "/admin", icon: "fa-box", label: "Products" },
-              { to: "/Orders", icon: "fa-cart-shopping", label: "Orders" },
-              { to: "/users", icon: "fa-users", label: "Users" },
+              { to: "/AdminDashboard", icon: "fa-gauge", label: "Dashboard" },
+              { to: "/AdminProducts", icon: "fa-box", label: "Products" },
+              { to: "/AdminOrders", icon: "fa-cart-shopping", label: "Orders" },
+              { to: "/AdminContacts", icon: "fa-users", label: "Contact" },
             ].map((item) => (
               <Link
                 key={item.to}
@@ -131,7 +131,7 @@ const EditProduct = () => {
         {/* Add Product Form */}
         
         <div className="flex justify-center items-center min-h-screen">
-          <Link to="/Products"
+          <Link to="/AdminProducts"
             className="absolute top-0 right-0 m-5 flex items-center gap-2 bg-blue-600 text-white px-3 md:px-5 py-2 md:py-2 rounded-4xl font-medium hover:bg-blue-800 transition text-sm md:text-base hover:shadow-lg hover:scale-[1.02]">
             <i className="fa-solid fa-list"></i> View All Products
           </Link>
