@@ -10,13 +10,13 @@ const Orders = () => {
   const [error, setError] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   
-  const url = "https://api-techgadget-backend.onrender.com/";
+  const url = "https://api-techgadget-backend.onrender.com/api";
 
   useEffect(() => {
     const fetchOrders = async () => {
       try {
         const res = await axios.get(
-          `${url}/api/Payment/GetAllPayment`
+          `${url}/Payment/GetAllPayment`
         );
         if (res.data.success) {
           setOrders(res.data.data || res.data.payments || []);
