@@ -48,7 +48,7 @@ const ProductAdmin = () => {
 
           <nav className="flex flex-col gap-3 px-2 mt-8">
             {[
-              { to: "/AdminProducts", icon: "fa-gauge", label: "Dashboard" },
+              { to: "/AdminDashboard", icon: "fa-gauge", label: "Dashboard" },
               { to: "/AdminProducts", icon: "fa-box", label: "Products" },
               { to: "/AdminOrders", icon: "fa-cart-shopping", label: "Orders" },
               { to: "/AdminContacts", icon: "fa-users", label: "Contact" },
@@ -156,7 +156,7 @@ const ProductAdmin = () => {
                     <Link to={`/EditProduct/${i._id}`} className="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-lg text-xs sm:text-sm md:text-sm flex items-center gap-1 transition transform hover:scale-105 shadow-sm">
                       <i className="fa-solid fa-pen-to-square"></i> Edit
                     </Link>
-                    <Link to={`/ProductDetailsAdmin/${i._id}`} className="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded-lg text-xs sm:text-sm md:text-sm flex items-center gap-1 transition transform hover:scale-105 shadow-sm">
+                    <Link to={`/AdminProductDetails/${i._id}`} className="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded-lg text-xs sm:text-sm md:text-sm flex items-center gap-1 transition transform hover:scale-105 shadow-sm">
                       <i className="fa-solid fa-eye"></i> View
                     </Link>
                     <button onClick={() => handledelete(i._id)} className="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded-lg text-xs sm:text-sm md:text-sm flex items-center gap-1 transition transform hover:scale-105 shadow-sm cursor-pointer">
